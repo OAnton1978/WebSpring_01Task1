@@ -57,11 +57,10 @@ public class Server {
                 return;
             }
             final var path = parts[1];
-            Request request = new Request();
-            var parsResultPash = request.getQueryParamsPath(path);
+            var parsResultPash = Request.getQueryParamsPath(path);
             System.out.println("Путь");
             System.out.println(parsResultPash);
-            var parsResultParams = request.getQueryParams(path);
+            var parsResultParams = Request.getQueryParams(path);
             System.out.println("Параметры");
             System.out.println(parsResultParams);
             if (!validPaths.contains(path)) {
